@@ -38,6 +38,16 @@ public class PrimeNumber {
                 }
             }
         }
-
+        for (int i = 0; i < primeNumberArray.length; i++) {
+            for (int j = i + 1; j < primeNumberArray.length; j++) {
+                if (primeNumberArray[i] == primeNumberArray[j]) {
+                    primeNumberArray[j] = 0;
+                }
+            }
+        }
+        Arrays.sort(primeNumberArray);
+        for (int k : primeNumberArray) {
+            System.out.println(k);
+        }
     }
 }
